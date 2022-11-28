@@ -45,3 +45,6 @@ Based on the excellent script of [wofferl](https://github.com/wofferl/proxmox-ba
     sudo apt-get install raspberrypi-kernel-headers pv zfs-initramfs zfsutils-linux
     sudo apt-get install proxmox-backup-server
     ```
+
+## ToDo
+- Automatic build (periodic or based on changes in the main repository)
