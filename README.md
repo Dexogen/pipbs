@@ -19,6 +19,8 @@
     ```bash
     sudo mkdir -p /etc/apt/keyrings
     curl -fsSL https://dexogen.github.io/pipbs/main/pipbs.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/pipbs.gpg
+    # OR 
+    curl -SsL https://dexogen.github.io/pipbs/main/pipbs.gpg | sudo apt-key add -
     ```
 
 3. Use the following command to set up the repository:
