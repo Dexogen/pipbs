@@ -18,13 +18,12 @@
 2. Add GPG key:
     ```bash
     sudo mkdir -p /etc/apt/keyrings
-    curl -fsSL https://temp_url/release-key.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/pbs-arm64.gpg
+    curl -fsSL https://dexogen.github.io/pipbs/main/KEY.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/pipbs.gpg
     ```
 
 3. Use the following command to set up the repository:
     ```bash
-    echo \
-    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/pbs-arm64.gpg] https://temp_url/repository/proxmox-pbs-arm64 main" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    sudo curl -SsL -o /etc/apt/sources.list.d/pipbs.list https://dexogen.github.io/pipbs/main/pipbs.list
     ```
 
 ### Install Proxmox Backup Server
