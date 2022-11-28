@@ -2,7 +2,7 @@
 # PiPBS - Proxmox Backup Server for the Raspberry Pi
 ![GitHub last commit](https://img.shields.io/github/last-commit/dexogen/pipbs)
 [![pages](https://github.com/Dexogen/pipbs/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Dexogen/pipbs/actions/workflows/pages/pages-build-deployment)
-[![build](https://github.com/Dexogen/pipbs/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/Dexogen/pipbs/actions/workflows/c-cpp.yml)
+[![build](https://github.com/Dexogen/pipbs/actions/workflows/build.yml/badge.svg)](https://github.com/Dexogen/pipbs/actions/workflows/build.yml)
 
 ## Installation
 
