@@ -1,0 +1,479 @@
+Package: libjs-extjs
+Version: 7.0.0-1
+Architecture: all
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 22491
+Breaks: proxmox-widget-toolkit (<< 3.1-1)
+Filename: ./libjs-extjs_7.0.0-1_all.deb
+Size: 2819620
+MD5sum: e95f1549e49deaf9b5d45d5cddb51a94
+SHA1: e857c51090b4db4ef5f283a35fc314dc27d885d4
+SHA256: 6e97a8c0ea9267122c26a9da7cde4ddf1422e841ed33b417d82fc4106ba1f7a6
+Section: web
+Priority: optional
+Homepage: https://www.sencha.com/
+Description: cross-browser JavaScript library
+ Ext JS is a cross-browser JavaScript library for building rich internet
+ applications.
+
+Package: libjs-qrcodejs
+Version: 1.20201119-pve1
+Architecture: all
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 31
+Filename: ./libjs-qrcodejs_1.20201119-pve1_all.deb
+Size: 8376
+MD5sum: 44c9d78abad803ee4845a8ef8c88a5d7
+SHA1: 2e9e1091672005ccfccae23814587c7a99c12e0c
+SHA256: b7c96a64537d35c954ae1cb468e2dfc0bacafed79d014750c9366c5938fa5e98
+Section: web
+Priority: optional
+Homepage: https://davidshimjs.github.io/qrcodejs/
+Description: Cross-Browser JavaScript library for making QRCodes
+ Cross-Browser QRCode generator supporting HTML5 Canvas and table tags.
+
+Package: libpmg-rs-perl
+Version: 0.6.2
+Architecture: arm64
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 5086
+Depends: perl, perlapi-5.32.1, libc6 (>= 2.28), libgcc-s1 (>= 4.2), libssl1.1 (>= 1.1.1), libuuid1 (>= 2.16)
+Filename: ./libpmg-rs-perl_0.6.2_arm64.deb
+Size: 1497252
+MD5sum: a0fc583c532f48e17e40dce8badeeeaa
+SHA1: 497a8b3684ed2ce2574fe717606034b144c51eb8
+SHA256: 77ea40a2171af655755517de4c08acd5e488c852c04c139f487a6da7ba7ac6ae
+Section: perl
+Priority: optional
+Homepage: https://www.proxmox.com
+Description: Components of Proxmox Mail Gateway which have been ported to Rust.
+ Contains parts of Proxmox Mail Gateway which have been ported to, or newly
+ implemented in the Rust programming language.
+
+Package: libpmg-rs-perl-dbgsym
+Source: libpmg-rs-perl
+Version: 0.6.2
+Auto-Built-Package: debug-symbols
+Architecture: arm64
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 3191
+Depends: libpmg-rs-perl (= 0.6.2)
+Filename: ./libpmg-rs-perl-dbgsym_0.6.2_arm64.deb
+Size: 1223220
+MD5sum: df5425161355fccdf4ce7f54a77113e7
+SHA1: 04cf615f1e0cc666f9084228de98dc12dcbde106
+SHA256: aa69c6a642587ba3d830ba9c544871a8d866377d1ef6be639419ce640fe10bd8
+Section: debug
+Priority: optional
+Description: debug symbols for libpmg-rs-perl
+Build-Ids: d06269d92ca7a5afe555b20c7b0401e9dbabce5e
+
+Package: libproxmox-acme-perl
+Source: libproxmox-acme
+Version: 1.4.2
+Architecture: all
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 39
+Depends: libpve-common-perl (>= 6~), perl:any
+Recommends: libproxmox-acme-plugins
+Breaks: libpve-common-perl (<< 6.0-20)
+Replaces: libpve-common-perl (<< 6.0-20)
+Filename: ./libproxmox-acme-perl_1.4.2_all.deb
+Size: 10352
+MD5sum: aecf76826dd337ca6ed33bb0e15b6546
+SHA1: 51a881b7a7b79865a2d04b04178397f774572b46
+SHA256: 898b5730e1e17e08c97cdfb08baac7e1b371dba19c21510fb5f8ab69bfb11cbb
+Section: admin
+Priority: optional
+Homepage: https://www.proxmox.com
+Description: Proxmox ACME integration perl library
+ Used in perl-based Proxmox project as common interface for DNS and HTTP ACME
+ challenges.
+
+Package: libproxmox-acme-plugins
+Source: libproxmox-acme
+Version: 1.4.2
+Architecture: all
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 753
+Depends: coreutils (>= 8.30-1), curl (>= 7.64.0-1), sed (>= 4.7-1)
+Recommends: idn
+Breaks: libproxmox-acme-perl (<< 1.1.0)
+Replaces: libproxmox-acme-perl (<< 1.1.0)
+Filename: ./libproxmox-acme-plugins_1.4.2_all.deb
+Size: 111232
+MD5sum: 21d3aeabf3950467509dc4d3d231881d
+SHA1: 059fd12b76381a59551e7fdee9b84f1503a7642a
+SHA256: 442d7b86114b1bf4977e64cae1cbf858aeab1f5afd78c6a3f2105e022c277ab3
+Section: admin
+Priority: optional
+Homepage: https://www.proxmox.com
+Description: Proxmox acme.sh wrapper for DNS API plugins
+ Used in Proxmox project to provide DNS API plugins for issuing ACME DNS
+ challenges with a small wrapper executable.
+
+Package: libproxmox-rs-perl
+Version: 0.2.1
+Architecture: arm64
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 21
+Depends: perl:any, libpve-rs-perl (>= 0.7.2) | libpmg-rs-perl (>= 0.6.2)
+Breaks: libpmg-rs-perl (<< 0.6.2), libpve-rs-perl (<< 0.7.2)
+Replaces: libpve-rs-perl (<< 0.6.0)
+Filename: ./libproxmox-rs-perl_0.2.1_arm64.deb
+Size: 2880
+MD5sum: a4e1af76bff016ddfde21e025ce2aea1
+SHA1: 009f6495ef07ed6a69fc66cf9a59251700cfde86
+SHA256: 7c47b451bf7cdb8b6c4c3a5dd5d3b2535b7923ca6c8fc1f612710f86646e23cd
+Section: perl
+Priority: optional
+Homepage: https://www.proxmox.com
+Description: PVE/PMG common parts which have been ported to Rust - Perl packages
+ Contains the perl side of modules provided by the libraries of both libpve-rs-perl and
+ libpmg-rs-perl, loading whichever is available.
+
+Package: libpve-common-perl
+Version: 7.2-3
+Architecture: all
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 422
+Depends: libclone-perl, libcrypt-openssl-random-perl, libcrypt-openssl-rsa-perl, libdevel-cycle-perl, libfilesys-df-perl, libhttp-daemon-perl, libhttp-message-perl, libio-stringy-perl, libjson-perl, liblinux-inotify2-perl, libmime-base32-perl, libnet-dbus-perl, libnet-ip-perl, libnetaddr-ip-perl, libproxmox-acme-perl, libproxmox-rs-perl, libstring-shellquote-perl, libtimedate-perl, liburi-perl, libwww-perl, libyaml-libyaml-perl, perl:any
+Breaks: ifupdown2 (<< 2.0.1-1+pve5), pmg-api (<< 7.1-5), pve-container (<< 3.0-9), pve-manager (<< 7.2-9), qemu-server (<< 7.0-19)
+Filename: ./libpve-common-perl_7.2-3_all.deb
+Size: 112228
+MD5sum: a83e41aef67e55466b73a9851d2da341
+SHA1: 7086309d08928a9b942b4a0818bb112941b65912
+SHA256: 724826fb1f2cb2a717191860de566c393af27316661a540fad6dc74271878de7
+Section: perl
+Priority: optional
+Description: Proxmox VE base library
+ This package contains the base library used by other Proxmox VE components.
+
+Package: libpve-rs-perl
+Version: 0.7.2
+Architecture: arm64
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 5589
+Depends: perl, perlapi-5.32.1, libc6 (>= 2.28), libgcc-s1 (>= 4.2), libssl1.1 (>= 1.1.1), libuuid1 (>= 2.16)
+Breaks: libpve-access-control (<< 7.1-3), libpve-common-perl (<< 7.1-4), pve-manager (<< 7.1-11)
+Filename: ./libpve-rs-perl_0.7.2_arm64.deb
+Size: 1618308
+MD5sum: 5fca7b43cffa2a969733842784c049c9
+SHA1: ff67ef6e75ccb9a5d25dd9f31aa3c857e9da63f0
+SHA256: 059d8f60689def84eaa89035e7778c8832ea1279466e1e228c6afdc5eee509d0
+Section: perl
+Priority: optional
+Homepage: https://www.proxmox.com
+Description: PVE parts which have been ported to Rust - Rust source code
+ This package contains the source for the Rust pve-rs crate, packaged by
+ debcargo for use with cargo and dh-cargo.
+
+Package: libpve-rs-perl-dbgsym
+Source: libpve-rs-perl
+Version: 0.7.2
+Auto-Built-Package: debug-symbols
+Architecture: arm64
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 3673
+Depends: libpve-rs-perl (= 0.7.2)
+Filename: ./libpve-rs-perl-dbgsym_0.7.2_arm64.deb
+Size: 1380188
+MD5sum: 60211549e0117ff9661813bf79f0e7e2
+SHA1: b9a44901a265ad11d6d5c1d706a93122306b7b27
+SHA256: b23557c83ab36c1a3cd73d164e3f9960013f5ed69e3b89cf19f556be5ab41610
+Section: debug
+Priority: optional
+Description: debug symbols for libpve-rs-perl
+Build-Ids: c30acee7ec527e34208bf9f6b68455efff86a2fe
+
+Package: pbs-i18n
+Source: proxmox-i18n
+Version: 2.7-2
+Architecture: all
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 400
+Filename: ./pbs-i18n_2.7-2_all.deb
+Size: 100496
+MD5sum: 484071bea3c24ea3d8b7d832188cad40
+SHA1: d3e43698859a50736fa43e739e11c84095888701
+SHA256: 6f27bc8a77c9757f2c7e1a3fe9f31c5f8bc4e46c830d9a5f91f4f84f7bfa6a68
+Section: perl
+Priority: optional
+Homepage: https://www.proxmox.com
+Description: Internationalization support for Proxmox Backup Server
+ This package provides the translations into all available languages.
+
+Package: pmg-i18n
+Source: proxmox-i18n
+Version: 2.7-2
+Architecture: all
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 570
+Filename: ./pmg-i18n_2.7-2_all.deb
+Size: 142572
+MD5sum: 176758f218353affd94b258904cc81c9
+SHA1: 648871922f9df70009c4d00e2d15a3c237fb000c
+SHA256: 6cc70943a3305863fa05f43a2cb2ed5eb1b5f34650db0e69c398264e31a6e2a2
+Section: perl
+Priority: optional
+Homepage: https://www.proxmox.com
+Description: Internationalization support for Proxmox Mail Gateway
+ This package provides the translations into all available languages.
+
+Package: proxmox-backup-client
+Source: rust-proxmox-backup
+Version: 2.2.7-1
+Architecture: arm64
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 12135
+Depends: qrencode, libacl1 (>= 2.2.23), libc6 (>= 2.29), libfuse3-3 (>= 3.2.3), libgcc-s1 (>= 4.2), libssl1.1 (>= 1.1.0)
+Filename: ./proxmox-backup-client_2.2.7-1_arm64.deb
+Size: 2648552
+MD5sum: effcb027939c1b0324edf012a32037cb
+SHA1: a7f523f0dd0ca82365f7ea58ab0866e31ab689f9
+SHA256: 24db80c6709a1c59ad70974b3f1e4bb2bf04fb602e1102fc4e03f11e815c7538
+Section: admin
+Priority: optional
+Homepage: https://www.proxmox.com
+Description: Proxmox Backup Client tools
+ This package contains the Proxmox Backup client, which provides a
+ simple command line tool to create and restore backups.
+
+Package: proxmox-backup-client-dbgsym
+Source: rust-proxmox-backup
+Version: 2.2.7-1
+Auto-Built-Package: debug-symbols
+Architecture: arm64
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 10915
+Depends: proxmox-backup-client (= 2.2.7-1)
+Filename: ./proxmox-backup-client-dbgsym_2.2.7-1_arm64.deb
+Size: 4778568
+MD5sum: 36a16cc42b46e6db1006cb0add8fec90
+SHA1: e9f6bd3d0b5b4bdc24c1a063e870cc27874a54ac
+SHA256: be4259466d88ad8e7fc5222c9cd2185e16b1adbb7c2bbfb0a40b8421612b9e3a
+Section: debug
+Priority: optional
+Description: debug symbols for proxmox-backup-client
+Build-Ids: 739cf636cab891307e55f442526b85e611e27f0c cfb223cf08ec5073d4f9b4c12670c4effa846c08
+
+Package: proxmox-backup-docs
+Source: rust-proxmox-backup
+Version: 2.2.7-1
+Architecture: all
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 9279
+Depends: fonts-font-awesome, libjs-extjs, libjs-mathjax
+Filename: ./proxmox-backup-docs_2.2.7-1_all.deb
+Size: 4395848
+MD5sum: bbaad3ae04894605221d3457ef08c42f
+SHA1: bc871d101c4aaca0751bb95d77495863b63563cb
+SHA256: 2814b59d565c5660aefc8e0e5c5337d05339f5300693f7267a30c5f73e96e54e
+Section: doc
+Priority: optional
+Homepage: https://www.proxmox.com
+Description: Proxmox Backup Documentation
+ This package contains the Proxmox Backup Documentation files.
+
+Package: proxmox-backup-file-restore
+Source: rust-proxmox-backup
+Version: 2.2.7-1
+Architecture: arm64
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 13644
+Depends: libacl1 (>= 2.2.23), libc6 (>= 2.29), libgcc-s1 (>= 4.2), libssl1.1 (>= 1.1.0), libuuid1 (>= 2.16)
+Recommends: pve-qemu-kvm (>= 5.0.0-9), proxmox-backup-restore-image
+Breaks: proxmox-backup-restore-image (<< 0.3.1)
+Filename: ./proxmox-backup-file-restore_2.2.7-1_arm64.deb
+Size: 2752204
+MD5sum: 1cf17096e1ad98935f9ffbbb4f4b1354
+SHA1: 32548b54902e980e634118489476c354bf4d2a8e
+SHA256: 8f540c4424b51f41525c11c5da3912450e8737366a023eb439f68afb54de21a0
+Section: admin
+Priority: optional
+Homepage: https://www.proxmox.com
+Description: Proxmox Backup single file restore tools for pxar and block device backups
+ This package contains the Proxmox Backup single file restore client for
+ restoring individual files and folders from both host/container and VM/block
+ device backups. It includes a block device restore driver using QEMU.
+
+Package: proxmox-backup-file-restore-dbgsym
+Source: rust-proxmox-backup
+Version: 2.2.7-1
+Auto-Built-Package: debug-symbols
+Architecture: arm64
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 12252
+Depends: proxmox-backup-file-restore (= 2.2.7-1)
+Filename: ./proxmox-backup-file-restore-dbgsym_2.2.7-1_arm64.deb
+Size: 5469772
+MD5sum: 876fe786a9a835ae0243401fba0ad4be
+SHA1: befee5b60df3f23d4b1a820dbf472e5665a29319
+SHA256: e61aeaa4de455e8b179329c7b765e5c75ba5059903609d4c9f3e13f646503adc
+Section: debug
+Priority: optional
+Description: debug symbols for proxmox-backup-file-restore
+Build-Ids: 2234c09224acaebaf53e931e2848e7af181e8f02 8eafef2b77d6b46965e93c19f69394cb55adf12c
+
+Package: proxmox-backup-server
+Source: rust-proxmox-backup
+Version: 2.2.7-1
+Architecture: arm64
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 101432
+Depends: fonts-font-awesome, libjs-extjs (>= 7~), libjs-qrcodejs (>= 1.20201119), libproxmox-acme-plugins, libsgutils2-2 (>= 1.43), libzstd1 (>= 1.3.8), lvm2, openssh-server, pbs-i18n, postfix | mail-transport-agent, proxmox-backup-docs, proxmox-mini-journalreader, proxmox-widget-toolkit (>= 3.4-3), pve-xtermjs (>= 4.7.0-1), sg3-utils, smartmontools, libapt-pkg6.0 (>= 1.9~), libc6 (>= 2.29), libcrypt1 (>= 1:4.1.0), libgcc-s1 (>= 4.2), libpam0g (>= 0.99.7.1), libssl1.1 (>= 1.1.1), libstdc++6 (>= 5.2), libsystemd0 (>= 246), libudev1 (>= 183), libuuid1 (>= 2.16)
+Recommends: zfsutils-linux, ifupdown2, proxmox-offline-mirror-helper
+Filename: ./proxmox-backup-server_2.2.7-1_arm64.deb
+Size: 23579344
+MD5sum: 2a0538e2a9f7c02f5127b6caa8df1fba
+SHA1: e34027580f4443270bb6b6c781e5b9de4bcc4e22
+SHA256: 9b8c71ad1c4f9ddf6b1afed6e54014e13cadb0f7ed383f7545db6c3f939f47ef
+Section: admin
+Priority: optional
+Homepage: https://www.proxmox.com
+Description: Proxmox Backup Server daemon with tools and GUI
+ This package contains the Proxmox Backup Server daemons and related
+ tools. This includes a web-based graphical user interface.
+
+Package: proxmox-backup-server-dbgsym
+Source: rust-proxmox-backup
+Version: 2.2.7-1
+Auto-Built-Package: debug-symbols
+Architecture: arm64
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 75042
+Depends: proxmox-backup-server (= 2.2.7-1)
+Filename: ./proxmox-backup-server-dbgsym_2.2.7-1_arm64.deb
+Size: 25449592
+MD5sum: 2349ebf6f66ac6dcd8b433ccc90873c8
+SHA1: dff6720848c052c242f7a9ce332be9d9bae55084
+SHA256: 8df30bea15aaa2a9ff7942b7fc236c6b6481fec859d461d06979d91381e4ae9f
+Section: debug
+Priority: optional
+Description: debug symbols for proxmox-backup-server
+Build-Ids: 05e281ab5ff2fec8847f2a775ab218899fde3869 109a6b4574362e2982675cee19a47bd6381c235e 273fa3fab5716e0b5f042c063cb6bed4e22f19fe 3ce8e7cfe89df52d61f2e1e221a969896edfbd7f 3f9140224a72626aff1efbd8679dc824213c654a 7a44c8b32386f338f0b94c9395c736eb1b241487 b83f417fdefd747cdf99bcc4a7d9c48ba6ef216c c35466d44b5601af8cc04611616837443182c376 e2566ff018f88a3bb7ce27644ecc1b68a65fae6b e45bc9f8a6c0a58f2d2e865d4f20e86c15bafe3f
+
+Package: proxmox-mini-journalreader
+Version: 1.3-1
+Architecture: arm64
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 24
+Depends: libc6 (>= 2.17), libsystemd0
+Filename: ./proxmox-mini-journalreader_1.3-1_arm64.deb
+Size: 7164
+MD5sum: c0d20fcb208451f1ce1de85425d6b879
+SHA1: 164a11eb57d6bc93220cf94d2b215b5c967b967d
+SHA256: 0e31e782b690f31c6b77a040dc9d1b3114de76ce5f96459455342bb040dde7fd
+Section: admin
+Priority: optional
+Description: Minimal systemd Journal Reader
+ A minimal application to read the last X lines of the systemd journal or the
+ last X lines before a cursor.
+
+Package: proxmox-mini-journalreader-dbgsym
+Source: proxmox-mini-journalreader
+Version: 1.3-1
+Auto-Built-Package: debug-symbols
+Architecture: arm64
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 32
+Depends: proxmox-mini-journalreader (= 1.3-1)
+Filename: ./proxmox-mini-journalreader-dbgsym_1.3-1_arm64.deb
+Size: 15800
+MD5sum: 20cedd00f38af82229db09d203b57e92
+SHA1: 889f7739470d3801b26831635d60b9cecd0ddde6
+SHA256: ad1a6109879b03631613052fe2a87c67c67763d1aa2ec8dc85f00fb83216e26f
+Section: debug
+Priority: optional
+Description: debug symbols for proxmox-mini-journalreader
+Build-Ids: 29cb9bb964ade64e203ee56bcfa9eec8a2651be0
+
+Package: proxmox-widget-toolkit
+Version: 3.5.1
+Architecture: all
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 495
+Filename: ./proxmox-widget-toolkit_3.5.1_all.deb
+Size: 120032
+MD5sum: 1e5a90b588f960b6c6b7478af1107f50
+SHA1: d8d7e98d14b375e21a7118c0c6f4b97a533f016c
+SHA256: 0c37e12fa4b7fa74d7b20105920d717c453d23527bfd318cc4e2c5b5f6bdf5ef
+Section: web
+Priority: optional
+Homepage: https://www.proxmox.com
+Description: ExtJS Helper Classes for Proxmox
+ ExtJS Helper Classes to easy access to Proxmox APIs.
+
+Package: proxmox-widget-toolkit-dev
+Source: proxmox-widget-toolkit
+Version: 3.5.1
+Architecture: all
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 59
+Filename: ./proxmox-widget-toolkit-dev_3.5.1_all.deb
+Size: 23120
+MD5sum: 94fee43325b2a0fe37a69a8e52cf9a9c
+SHA1: cace9d171001bb7c92fcec6c9d5e4a65c2454059
+SHA256: 4076756b920eb78a08bfe01dec21f9d9694ee3609c8c8253bb83af8b200d2459
+Section: web
+Priority: optional
+Homepage: https://www.proxmox.com
+Description: Development dependencies for Proxmox Projects
+ Contains some common javascript code that are dev-dependencies,
+ for various Proxmox projects.
+
+Package: pve-eslint
+Version: 8.23.1-1
+Architecture: all
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 4671
+Depends: node-commander, node-colors, nodejs (>= 12.22.12~dfsg)
+Provides: node-pve-eslint (= 7.28.0)
+Filename: ./pve-eslint_8.23.1-1_all.deb
+Size: 706276
+MD5sum: 9b42f41b0455175bea8c57d71b5142fd
+SHA1: 80817a2b2dcad7825bae8283159a82a391b4fbd1
+SHA256: 4d71e969462db49a80eddd04689bdf59517d8d56e934aad14d0b697f438712ea
+Section: devel
+Priority: optional
+Homepage: http://www.proxmox.com
+Description: ESLint for Proxmox Virtual Environment development
+ This package contains a version of eslint used to develop the
+ Proxmox Virtual Environment, and other Proxmox projects, web GUI.
+
+Package: pve-i18n
+Source: proxmox-i18n
+Version: 2.7-2
+Architecture: all
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 833
+Filename: ./pve-i18n_2.7-2_all.deb
+Size: 208096
+MD5sum: 2fba755e756fc2c507d344e1fe89bc14
+SHA1: e1bd08333b71a90a4d12a909dee03b3804facc3b
+SHA256: 855f901a43df2a7980dc70b8319ed10a0564ef19237708562eaafcf881c60301
+Section: perl
+Priority: optional
+Homepage: https://www.proxmox.com
+Description: Internationalization support for Proxmox VE
+ This package provides the translations into all available languages.
+
+Package: pve-xtermjs
+Source: rust-termproxy
+Version: 4.16.0-1
+Architecture: arm64
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Installed-Size: 1503
+Filename: ./pve-xtermjs_4.16.0-1_arm64.deb
+Size: 296864
+MD5sum: 8a0ccfc95fb3b8c4f982a959c008f129
+SHA1: 5d6a05ecbcf40975dbf3a1c30039383767bfc018
+SHA256: 9fa7a840b00c4ad56f23b53c0c0fd79df95666639f5a1595028ec24b25f389d9
+Section: admin
+Priority: optional
+Multi-Arch: allowed
+Homepage: https://www.proxmox.com
+Description: HTML/JS Shell client for Proxmox projects
+ This package provides an xterm.js client/proxy for Proxmoxprojects'  Hosts,
+ Proxmox VE containers or Proxmox VE VM's serial-terminals.
+
