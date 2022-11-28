@@ -18,7 +18,7 @@
 2. Add GPG key:
     ```bash
     sudo mkdir -p /etc/apt/keyrings
-    curl -fsSL https://dexogen.github.io/pipbs/main/KEY.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/pipbs.gpg
+    curl -fsSL https://dexogen.github.io/pipbs/main/pipbs.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/pipbs.gpg
     ```
 
 3. Use the following command to set up the repository:
