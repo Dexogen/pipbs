@@ -9,7 +9,7 @@ jobs:
       with:
         commands: |
             apt-get install -y --no-install-recommends git tree
-            git submodule update --remote src/build
+            git submodule update --init src/build
             cd src/build
             tree
             
