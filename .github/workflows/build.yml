@@ -9,7 +9,7 @@ jobs:
     name: Build on ubuntu-18.04 aarch64
     steps:
       - uses: actions/checkout@v3
-      - uses: Dexogen/pipbs@v1
+      - uses: Dexogen/pipbs@v0.1-alpha
         name: Run commands
         id: runcmd
         with:
