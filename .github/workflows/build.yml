@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu20.04
     name: Build on ubuntu20.04 aarch64
     steps:
-      - uses: actions/checkout@v2.1.0
-      - uses: uraimo/run-on-arch-action@v2
+      - uses: actions/checkout@v2.5.0
+      - uses: uraimo/run-on-arch-action@v2.3.0
         name: Run commands
         id: runcmd
         with:
