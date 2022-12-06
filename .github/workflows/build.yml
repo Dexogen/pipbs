@@ -8,7 +8,7 @@ jobs:
     - uses: pguyot/arm-runner-action@v2
       with:
         commands: |
-            apt-get install -y --no-install-recommends tree
+            apt-get install -y --no-install-recommends git tree
             git submodule update --remote src/build
             cd src/build
             tree
