@@ -1,25 +1,26 @@
-on:
-  push:
-    branches: [ "main" ]
+name: Basic Example
+on: [push, pull_request]
 
 jobs:
-  aarch64_job:
-    # The host should always be Linux
+  test:
+    # The host should always be linux
     runs-on: ubuntu-18.04
-    name: Build on ubuntu-18.04 aarch64
+    name: Build on ubuntu-18.04 armv7
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - uses: Dexogen/pipbs@v0.1-alpha
         name: Run commands
         id: runcmd
         with:
-          arch: aarch64
+          arch: armv7
           distro: ubuntu18.04
-          githubToken: ${{ github.token }}
+
+          # Not required, but speeds up builds
+          githubToken: ${{ github.TOKEN }}
+
           run: |
             uname -a
             echo ::set-output name=uname::$(uname -a)
-
       - name: Get the output
         run: |
           echo "The uname output was ${{ steps.runcmd.outputs.uname }}"
