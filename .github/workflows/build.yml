@@ -7,17 +7,21 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-
-    runs-on: arm64v8/ubuntu
-
+  aarch64_job:
+    # The host should always be Linux
+    runs-on: ubuntu-18.04
+    name: Build on ubuntu-18.04 aarch64
     steps:
-    - uses: actions/checkout@v3
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+      - name: Run commands
+        id: runcmd
+        with:
+          arch: aarch64
+          distro: ubuntu18.04
+          githubToken: ${{ github.token }}
+          run: |
+            uname -a
+            echo ::set-output name=uname::$(uname -a)
+
+      - name: Get the output
+        run: |
+          echo "The uname output was ${{ steps.runcmd.outputs.uname }}"
