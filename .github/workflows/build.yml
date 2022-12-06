@@ -1,27 +1,22 @@
 on: [push, pull_request]
 
 jobs:
-  aarch64_job:
-    runs-on: ubuntu20.04
-    name: Build on ubuntu20.04 aarch64
+  armv7_job:
+    # The host should always be Linux
+    runs-on: ubuntu-18.04
+    name: Build on ubuntu-18.04 aarch64
     steps:
-      - uses: actions/checkout@v2.5.0
-      - uses: uraimo/run-on-arch-action@v2.3.0
+      - uses: actions/checkout@v2.1.0
+      - uses: uraimo/run-on-arch-action@v2
         name: Run commands
         id: runcmd
         with:
           arch: aarch64
-          distro: ubuntu20.04
+          distro: ubuntu18.04
           githubToken: ${{ github.token }}
           run: |
-            apt-get install -y --no-install-recommends \
-              build-essential curl ca-certificates sudo git lintian \
-              pkg-config libudev-dev libssl-dev libapt-pkg-dev libclang-dev \
-              libpam0g-dev tree
-            tree
             uname -a
             echo ::set-output name=uname::$(uname -a)
-
       - name: Get the output
         run: |
           echo "The uname output was ${{ steps.runcmd.outputs.uname }}"
