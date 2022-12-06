@@ -14,8 +14,6 @@ jobs:
           distro: ubuntu20.04
           githubToken: ${{ github.token }}
           run: |
-            apt-get install -y --no-install-recommends build-essential curl ca-certificates sudo git lintian pkg-config libudev-dev libssl-dev libapt-pkg-dev libclang-dev libpam0g-dev tree
-            tree
             uname -a
             echo ::set-output name=uname::$(uname -a)
       - name: Get the output
