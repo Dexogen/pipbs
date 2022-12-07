@@ -12,17 +12,18 @@ jobs:
             apt-get install -y --no-install-recommends \
               build-essential curl ca-certificates sudo git lintian \
               pkg-config libudev-dev libssl-dev libapt-pkg-dev libclang-dev \
-              libpam0g-dev raspberrypi-kernel-headers uuid-dev git
+              libpam0g-dev raspberrypi-kernel-headers uuid-dev git tree
             git submodule update --init src/build
             cd src/build
             curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -sSf | sh -s -- -y
             . ~/.cargo/env
             ./build.sh
-            mv packages/*.deb ../../main
-    - name: Commit changes
-      uses: EndBug/add-and-commit@v9
-      with:
-        author_name: Dexogen
-        author_email: dexogen@gmail.com
-        message: 'fresh build'
-        add: '*'  
+            tree
+            pwd
+    #- name: Commit changes
+    #  uses: EndBug/add-and-commit@v9
+    #  with:
+    #    author_name: Dexogen
+    #    author_email: dexogen@gmail.com
+    #    message: 'fresh build'
+    #    add: '*'  
