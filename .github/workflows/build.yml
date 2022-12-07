@@ -5,8 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: pguyot/arm-runner-action@v2
-      
+    - uses: pguyot/arm-runner-action@v2  
       with:
         image_additional_mb: 10000
         commands: |
@@ -17,6 +16,13 @@ jobs:
             git submodule update --init src/build
             cd src/build
             curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -sSf | sh -s -- -y
-            source ~/.cargo/env
+            . ~/.cargo/env
             ./build.sh
-            
+            mv packages/*.deb ../../main
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v9
+      with:
+        author_name: Dexogen
+        author_email: dexogen@gmail.com
+        message: 'fresh build'
+        add: '*'  
