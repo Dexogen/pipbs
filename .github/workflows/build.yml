@@ -6,7 +6,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: pguyot/arm-runner-action@v2
+      
       with:
+        image_additional_mb: 10000
         commands: |
             apt-get install -y --no-install-recommends \
               build-essential curl ca-certificates sudo git lintian \
