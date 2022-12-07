@@ -16,7 +16,7 @@ jobs:
               libpam0g-dev raspberrypi-kernel-headers uuid-dev git
             git submodule update --init src/build
             cd src/build
-            curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -sSf | sh -s
+            curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -sSf | sh -s -- -y
             source ~/.cargo/env
             ./build.sh
             
