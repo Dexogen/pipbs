@@ -3,7 +3,6 @@
 ![arm64](https://img.shields.io/badge/architecture-arm64-9cf)
 [![wofferl](https://img.shields.io/badge/wofferl-proxmox--backup--arm64-orange.svg)](https://github.com/wofferl/proxmox-backup-arm64)
 ![GitHub last commit](https://img.shields.io/github/last-commit/dexogen/pipbs)
-[![build](https://github.com/Dexogen/pipbs/actions/workflows/build.yml/badge.svg)](https://github.com/Dexogen/pipbs/actions/workflows/build.yml)
 
 Based on the excellent script of [wofferl](https://github.com/wofferl/proxmox-backup-arm64).
 
