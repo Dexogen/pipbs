@@ -35,7 +35,7 @@ Based on the excellent script of [wofferl](https://github.com/wofferl/proxmox-ba
 
 1. Update the `apt` package index:
     ```bash
-    sudo apt update
+    apt update
     ```
 2. Install packages:
     ```bash
