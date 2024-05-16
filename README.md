@@ -14,16 +14,14 @@ Based on the excellent script of [wofferl](https://github.com/wofferl/proxmox-ba
 
 1. Update the apt package index and install packages to allow apt to use a repository over HTTPS:
     ```bash
-    apt update
-    apt install -y ca-certificates curl gnupg lsb-release
+    sudo apt update
+    sudo apt install -y ca-certificates curl gnupg lsb-release
     ```
 
 2. Add GPG key:
     ```bash
     mkdir -p /etc/apt/keyrings
-    curl -fsSL https://dexogen.github.io/pipbs/gpg.key | gpg --dearmor -o /etc/apt/keyrings/pipbs.gpg
-    # or deprecated method
-    curl -fsSL https://dexogen.github.io/pipbs/gpg.key | apt-key add -
+    sudo curl -fsSL https://dexogen.github.io/pipbs/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/pipbs.gpg
     ```
 
 3. Use the following command to set up the repository:
@@ -35,10 +33,10 @@ Based on the excellent script of [wofferl](https://github.com/wofferl/proxmox-ba
 
 1. Update the `apt` package index:
     ```bash
-    apt update
+    sudo apt update
     ```
 2. Install packages:
     ```bash
-    apt install -y raspberrypi-kernel-headers pv zfs-initramfs zfsutils-linux
-    apt install -y proxmox-backup-server
+    sudo apt install -y raspberrypi-kernel-headers pv zfs-initramfs zfsutils-linux
+    sudo apt install -y proxmox-backup-server
     ```
