@@ -26,8 +26,9 @@ Based on the excellent script of [wofferl](https://github.com/wofferl/proxmox-ba
 
 3. Use the following command to set up the repository:
     ```bash
-    echo "deb [arch=arm64 signed-by=/etc/apt/keyrings/pipbs.gpg] https://dexogen.github.io/pipbs/ bookworm main" > /etc/apt/sources.list.d/pipbs.list
+    echo "deb [arch=arm64 signed-by=/etc/apt/keyrings/pipbs.gpg] https://dexogen.github.io/pipbs/ bookworm main" | sudo tee /etc/apt/sources.list.d/pipbs.list
     ```
+    
 
 ### Install Proxmox Backup Server
 
